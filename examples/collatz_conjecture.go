@@ -7,7 +7,9 @@ func main() {
 	var num int
 	fmt.Scan(&num)
 	for num != 0 {
-		collatzConjecture(num)
+		if num > 0 {
+			collatzConjecture(num)
+		}
 		fmt.Print("\nEnter a number : ")
 		fmt.Scan(&num)
 	}
