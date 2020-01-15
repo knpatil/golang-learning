@@ -10,7 +10,8 @@ func main() {
 	var num int
 	fmt.Scan(&num)
 	for num != 0 {
-		fmt.Println(fizzBuzz(num))
+		fmt.Println("fizzBuzz1 response : ", fizzBuzz(num))
+		fmt.Println("fizzBuzz2 response : ", fizzBuzz2(num))
 		fmt.Print("Enter a number : ")
 		fmt.Scan(&num)
 	}
@@ -28,4 +29,18 @@ func fizzBuzz(num int) string {
 	default:
 		return strconv.Itoa(num)
 	}
+}
+
+func fizzBuzz2(num int) string {
+	result := ""
+	if num%3 == 0 {
+		result += "fizz"
+	}
+	if num%5 == 0 {
+		result += "buzz"
+	}
+	if result == "" {
+		result = strconv.Itoa(num)
+	}
+	return result
 }
