@@ -38,6 +38,7 @@ func (c circle) perim() float64 {
 
 // not method
 func measure(g geometry) {
+	fmt.Println("Area: ", g.area())
 	fmt.Println(g, g.area(), g.perim())
 }
 
